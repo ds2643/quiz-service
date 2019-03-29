@@ -59,6 +59,8 @@ In the context above, the server is available at url: `http//localhost:3000/`.
 ### Communicating with the Service
 Please see the api description document included in `docs/api.md`.
 
+Please note sample `json` messages are included in the `samples/` directory at the root of this repository.
+
 ### Testing
 A set of tests packaged in the Clojure projects behaviorally probe the server and associated session-management logic.
 
