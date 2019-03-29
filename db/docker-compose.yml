@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      # binding locally exposed port to port in the container
+      - ${DB_PORT}:3306
+    expose:
+      - ${DB_PORT}
+
+    # location of data persistence
+    volumes:
+      - my-db:/var/lib/mysql
+
+volumes:
+  my-db:
