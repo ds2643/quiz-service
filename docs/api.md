@@ -50,7 +50,8 @@ This route allows for submission of answers:
     "session-id": "some-session-id",
     "id": "some-question-id"
   }
-}```
+}
+```
 
 Please note that responses are constrained to integers. These integers are intended to communicate answer enumerations.
 
@@ -64,6 +65,7 @@ Once all responses have been submitted, this route may be used to terminate the 
 ``` json
 {
   "session-id": "some-session-id"
-}```
+}
+```
 
 The status field of the response returns "ok" if the confirmation is successful.

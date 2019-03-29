@@ -25,5 +25,15 @@ The choice of a relational database over NoSQL alternatives reflects a choice to
 
 The packaged Dockerized MySQL database represents a test rather than production-grade solution to persistence. However, the implementation may be reconfigured to use a more permanent solution. One attractive choice possibly worth exploring is AWS RDS, which offers a cloud-based MySQL solution. Such an options several advantages in production, such as managing backups and scaling.
 
+### Database Schema
+The database is broken into four tables serving the needs of session logic defined in the `quiz-service.sessions` module.
+
+1. Sessions: Stores user information associated with sessions.
+2. Answers: Stores user answers to questions.
+3. Questions: Stores content associated with questions.
+4. Rules: Contains rules constraining user behavior during quiz. For now, only includes max time allocated.
+
+An improved implementation would also address the need to store assets. MySQL might provide a nice mechanism for storing versioned references to such data.
+
 ### Possible Deployment Solutions
 In the context of a production environment, we should aim to optimize against the risk of single points of failure. A good starting point might be containerizing of this application to better serve Kupernetes. For instance, we should consider delegating requests from the caller amongst several quiz servers: If a single server fails, the system as a whole may continue healthily.

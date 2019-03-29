@@ -14,7 +14,7 @@ Using the service requires installation of docker-compose and leiningen (tool fo
 ### Initializing the Database
 The service uses a dockerized MySQL database. This service may be initialized with docker-compose.
 
-Using docker-compose is properly installed, the database may be started as follows:
+Assuming docker-compose is properly installed, the database may be started as follows:
 ```
 export DB_PORT=3306 # assign port associated with db
 docker-compose up
