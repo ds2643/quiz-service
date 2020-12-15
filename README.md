@@ -1,5 +1,5 @@
-# Correlation One Quiz Service
-This repository contains an implementation of a minimal back-end (database and HTTP server) that aims to partially recreate Correlation One's existing quiz service.
+# Quiz Service
+This repository contains an implementation of a minimal back-end (database and HTTP server) that aims to partially recreate an existing quiz service.
 
 The project is implemented with Clojure and MySQL.
 
